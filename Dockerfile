@@ -28,7 +28,7 @@ RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e' \
       && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e.zip'
 
 RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1' \
-      && 'curl' '-f' '-L' '-k' '--output' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1.zip' 'https://github.com/hpgrahsl/kryptonite-for-kafka/releases/download/v0.4.2/connect-transform-kryptonite-0.4.2.zip' \
+      && 'curl' '-f' '-L' '-k' '--output' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1.zip' 'https://github.com/hpgrahsl/kryptonite-for-kafka/releases/download/v0.4.0/connect-transform-kryptonite-0.4.0.zip' \
       && 'unzip' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1.zip' '-d' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1' \
       && 'find' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1' '-type' 'l' | 'xargs' 'rm' '-f' \
       && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1.zip'
