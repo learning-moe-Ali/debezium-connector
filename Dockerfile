@@ -15,6 +15,12 @@ RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/2381c496' \
       && 'find' '/opt/kafka/plugins/debezium-oracle-connector/2381c496' '-type' 'l' | 'xargs' 'rm' '-f' \
       && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/2381c496.zip'
 
+RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/2381c495' \
+      && 'curl' '-f' '-L' '--output' '/opt/kafka/plugins/debezium-oracle-connector/2381c495.zip' 'https://maven.repository.redhat.com/ga/io/debezium/debezium-connector-oracle/2.3.7.Final-redhat-00001/debezium-connector-oracle-2.3.7.Final-redhat-00001-plugin.zip' \
+      && 'unzip' '/opt/kafka/plugins/debezium-oracle-connector/2381c495.zip' '-d' '/opt/kafka/plugins/debezium-oracle-connector/2381c495' \
+      && 'find' '/opt/kafka/plugins/debezium-oracle-connector/2381c495' '-type' 'l' | 'xargs' 'rm' '-f' \
+      && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/2381c495.zip'
+      
 RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/13037ebb' \
       && 'curl' '-f' '-L' '--output' '/opt/kafka/plugins/debezium-oracle-connector/13037ebb.zip' 'https://maven.repository.redhat.com/ga/io/debezium/debezium-scripting/2.3.4.Final-redhat-00001/debezium-scripting-2.3.4.Final-redhat-00001.zip' \
       && 'unzip' '/opt/kafka/plugins/debezium-oracle-connector/13037ebb.zip' '-d' '/opt/kafka/plugins/debezium-oracle-connector/13037ebb' \
