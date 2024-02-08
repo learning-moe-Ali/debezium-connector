@@ -10,7 +10,7 @@ ARG no_proxy=.cluster.local,.eg.albaraka.local,.svc,10.0.0.0/8,100.90.0.0/16,100
       # Connector plugin debezium-oracle-connector
       ##########
 RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/2381c496' \
-      && 'curl' '-f' '-L' '--output' '/opt/kafka/plugins/debezium-oracle-connector/2381c496.zip' 'https://maven.repository.redhat.com/ga/io/debezium/debezium-connector-oracle/2.3.4.Final-redhat-00001/debezium-connector-oracle-2.3.4.Final-redhat-00001-plugin.zip' \
+      && 'curl' '-f' '-L' '--output' '/opt/kafka/plugins/debezium-oracle-connector/2381c496.zip' 'https://maven.repository.redhat.com/ga/io/debezium/debezium-connector-mysql/2.3.7.Final-redhat-00001/debezium-connector-mysql-2.3.7.Final-redhat-00001-plugin.zip' \
       && 'unzip' '/opt/kafka/plugins/debezium-oracle-connector/2381c496.zip' '-d' '/opt/kafka/plugins/debezium-oracle-connector/2381c496' \
       && 'find' '/opt/kafka/plugins/debezium-oracle-connector/2381c496' '-type' 'l' | 'xargs' 'rm' '-f' \
       && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/2381c496.zip'
