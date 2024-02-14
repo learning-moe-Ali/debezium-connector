@@ -33,8 +33,15 @@ RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e' \
       && 'find' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e' '-type' 'l' | 'xargs' 'rm' '-f' \
       && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e.zip'
 
-RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1' \
-      && 'curl' '-f' '-L' '-k' '--output' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1.jar' 'https://raw.githubusercontent.com/hpgrahsl/rhd-csflc-kafka-connect-demos/main/use_case_1/connectors/smt/connect-transform-kryptonite-0.2.0.jar' 
+RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696f' \
+      && 'curl' '-f' '-L' '-k' '--output' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e.zip' 'https://github.com/hpgrahsl/kryptonite-for-kafka/releases/download/v0.4.2/connect-transform-kryptonite-0.4.2.zip' \
+      && 'unzip' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696f.zip' '-d' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696e' \
+      && 'find' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696f' '-type' 'l' | 'xargs' 'rm' '-f' \
+      && 'rm' '-vf' '/opt/kafka/plugins/debezium-oracle-connector/aa0c696f.zip'
+
+# RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1' \
+#       && 'curl' '-f' '-L' '-k' '--output' '/opt/kafka/plugins/debezium-oracle-connector/a615fea1.jar' 'https://raw.githubusercontent.com/hpgrahsl/rhd-csflc-kafka-connect-demos/main/use_case_1/connectors/smt/connect-transform-kryptonite-0.2.0.jar' 
+
 
 RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/7c46752d' \
       && 'curl' '-f' '-L' '--output' '/opt/kafka/plugins/debezium-oracle-connector/7c46752d/7c46752d.jar' 'https://repo1.maven.org/maven2/com/oracle/database/jdbc/ojdbc8/19.21.0.0/ojdbc8-19.21.0.0.jar'
