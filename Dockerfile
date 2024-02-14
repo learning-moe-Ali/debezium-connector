@@ -48,6 +48,7 @@ RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/7c46752d' \
 
 
 RUN echo 'export JAVA_TOOL_OPTIONS="--add-opens=java.base/java.util=ALL-UNNAMED"' >> /etc/profile
-
+RUN echo 'export testtest=21' >> /etc/profile
+RUN echo 'JAVA_TOOL_OPTIONS="--add-opens=java.base/java.util=ALL-UNNAMED"' >> /etc/environment
 
 USER 1001
