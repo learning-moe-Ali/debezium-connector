@@ -47,6 +47,7 @@ RUN 'mkdir' '-p' '/opt/kafka/plugins/debezium-oracle-connector/7c46752d' \
       && 'curl' '-f' '-L' '--output' '/opt/kafka/plugins/debezium-oracle-connector/7c46752d/7c46752d.jar' 'https://repo1.maven.org/maven2/com/oracle/database/jdbc/ojdbc8/19.21.0.0/ojdbc8-19.21.0.0.jar'
 
 
-RUN export JAVA_TOOL_OPTIONS="--add-opens=java.base/java.util=ALL-UNNAMED"
+RUN echo 'export JAVA_TOOLS_OPTION="--add-opens=java.base/java.util=ALL-UNNAMED"' >> /etc/profile
+
 
 USER 1001
